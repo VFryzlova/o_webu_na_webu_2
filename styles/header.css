@@ -1,0 +1,82 @@
+header {
+    height: 250px;
+    background-color: var(--yellow);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Big Shoulders Display', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Header background----- */
+
+.header-bg::after {
+    position: relative;
+}
+
+.header-bg::after {
+    width: 100%;
+    content: '';
+    background-image: linear-gradient( 109.6deg, rgba(17, 151, 147, 1) 11.2%, rgba(154, 214, 212, 1) 55.4%, rgba(255, 233, 171, 1) 100.2%);
+    height: 250px;
+    border-bottom: 10px solid var(--brown);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Header text */
+
+.title {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 95px;
+    font-size: 3em;
+    color: var(--darkgrey);
+    z-index: 99;
+}
+
+.sub-title {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding-top: 170px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    color: var(--darkgrey);
+    z-index: 99;
+}
+
+@media (min-width: 1080px) {
+    .title {
+        font-size: 3.5em;
+    }
+}
+
+/* Arrow---------- */
+
+.arrow::after, .arrow::before {
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 100px;
+    background: var(--brown);
+    bottom: -1em;
+}
+
+.arrow::before {
+    right: 50%;
+    transform: skew(0, 20deg);
+}
+
+.arrow::after {
+    left: 50%;
+    transform: skew(0, -20deg);
+}
